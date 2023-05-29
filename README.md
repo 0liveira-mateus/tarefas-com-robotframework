@@ -1,6 +1,6 @@
 # automacao-simplificada
 
-![Robot Framework Logo](https://path/to/robot-framework-logo.png)
+![Robot Framework Logo](https://upload.wikimedia.org/wikipedia/commons/e/e4/Robot-framework-logo.png)
 
 Bem-vindo ao repositório Simple Robot Framework Scripts! Aqui você encontrará e poderá contribuir com scripts do Robot Framework desenvolvidos de forma simples, sem o uso de loops, estruturas de repetição ou condições complexas.
 
