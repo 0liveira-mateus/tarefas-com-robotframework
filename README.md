@@ -1,5 +1,4 @@
 # automacao-simplificada
-# Simple Robot Framework Scripts Repository
 
 ![Robot Framework Logo](https://path/to/robot-framework-logo.png)
 
