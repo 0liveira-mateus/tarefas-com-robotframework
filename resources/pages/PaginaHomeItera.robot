@@ -11,6 +11,7 @@ Resource    ../main.robot
 ...    CampoEmail=//input[@id="email"]
 ...    CampoSenha=//input[@id="password"]
 ...    CampoAdress=//textarea[@id="address"]
+...    BtnSubimit=//button[@name="submit"]
 
 
 *** Keywords ***
@@ -45,3 +46,10 @@ E preencher o campo Adress
     Input Text    ${tarefa_um.CampoAdress}    ${dados_t1.Adress}    
     Sleep    5   
     Textarea Should Contain    ${tarefa_um.CampoAdress}    ${dados_t1.Adress}  
+
+E clicar no botao submit
+    Wait Until Element Is Visible    ${tarefa_um.BtnSubimit}
+    Click Button    ${tarefa_um.BtnSubimit}
+
+Então ele finalizará a tarefa 
+    Close Browser

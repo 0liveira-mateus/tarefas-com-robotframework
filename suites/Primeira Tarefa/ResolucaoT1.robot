@@ -9,3 +9,5 @@ Preenchendo Dados
     E preencher o campo Mobile number
     E preencher o campo Password
     E preencher o campo Adress
+    E clicar no botao submit
+    Então ele finalizará a tarefa
