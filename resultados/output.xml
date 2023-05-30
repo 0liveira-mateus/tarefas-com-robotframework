@@ -1,151 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230529 12:04:06.046" rpa="false" schemaversion="3">
-<suite id="s1" name="Resolucao1" source="C:\Users\tsjes\OneDrive\Documentos\automacao-simplificada\suites\PrimeiraTarefa\Resolucao1.robot">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230530 00:46:50.199" rpa="false" schemaversion="3">
+<suite id="s1" name="ResolucaoT1" source="C:\Users\tsjes\OneDrive\Documentos\automacao-simplificada\suites\Primeira Tarefa\ResolucaoT1.robot">
 <test id="s1-t1" name="Preenchendo Dados" line="7">
 <kw name="Dado um usuário acessando o site Itera" library="setup_teardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${tarefa_um.link}</arg>
 <arg>Edge</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230529 12:04:06.906" level="INFO">Opening browser 'Edge' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
-<status status="PASS" starttime="20230529 12:04:06.905" endtime="20230529 12:04:09.774"/>
+<msg timestamp="20230530 00:46:50.861" level="INFO">Opening browser 'Edge' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20230530 00:46:50.860" endtime="20230530 00:46:53.828"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${tarefa_um.ConfirmPage}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230529 12:04:09.962" level="INFO">Element '//h1[@class="display-3"]' is displayed.</msg>
-<status status="PASS" starttime="20230529 12:04:09.776" endtime="20230529 12:04:09.962"/>
+<msg timestamp="20230530 00:46:53.858" level="INFO">Element '//h1[@class="display-3"]' is displayed.</msg>
+<status status="PASS" starttime="20230530 00:46:53.828" endtime="20230530 00:46:53.858"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${tarefa_um.ConfirmPage}</arg>
 <arg>Test automation practice form</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230529 12:04:09.966" level="INFO">Verifying element '//h1[@class="display-3"]' contains exact text 'Test automation practice form'.</msg>
-<status status="PASS" starttime="20230529 12:04:09.962" endtime="20230529 12:04:10.016"/>
+<msg timestamp="20230530 00:46:53.859" level="INFO">Verifying element '//h1[@class="display-3"]' contains exact text 'Test automation practice form'.</msg>
+<status status="PASS" starttime="20230530 00:46:53.858" endtime="20230530 00:46:53.893"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 12:04:15.018" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230529 12:04:10.017" endtime="20230529 12:04:15.018"/>
+<msg timestamp="20230530 00:46:58.893" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230530 00:46:53.893" endtime="20230530 00:46:58.893"/>
 </kw>
-<status status="PASS" starttime="20230529 12:04:06.905" endtime="20230529 12:04:15.018"/>
+<status status="PASS" starttime="20230530 00:46:50.860" endtime="20230530 00:46:58.893"/>
 </kw>
 <kw name="Quando ele preencher o campo de Name" library="PaginaHomeItera">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoNome}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230529 12:04:15.019" endtime="20230529 12:04:15.046"/>
+<status status="PASS" starttime="20230530 00:46:58.894" endtime="20230530 00:46:58.921"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoNome}</arg>
 <arg>${dados_t1.Nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230529 12:04:15.047" level="INFO">Typing text 'Tarefa1' into text field '//input[@id='name']'.</msg>
-<status status="PASS" starttime="20230529 12:04:15.046" endtime="20230529 12:04:15.176"/>
+<msg timestamp="20230530 00:46:58.923" level="INFO">Typing text 'Tarefa1' into text field '//input[@id='name']'.</msg>
+<status status="PASS" starttime="20230530 00:46:58.921" endtime="20230530 00:46:59.101"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 12:04:20.177" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230529 12:04:15.177" endtime="20230529 12:04:20.177"/>
+<msg timestamp="20230530 00:47:04.102" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230530 00:46:59.101" endtime="20230530 00:47:04.102"/>
 </kw>
 <kw name="Textfield Should Contain" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoNome}</arg>
 <arg>${dados_t1.Nome}</arg>
 <doc>Verifies text field ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230529 12:04:20.225" level="INFO">Text field '//input[@id='name']' contains text 'Tarefa1'.</msg>
-<status status="PASS" starttime="20230529 12:04:20.177" endtime="20230529 12:04:20.225"/>
+<msg timestamp="20230530 00:47:04.177" level="INFO">Text field '//input[@id='name']' contains text 'Tarefa1'.</msg>
+<status status="PASS" starttime="20230530 00:47:04.102" endtime="20230530 00:47:04.177"/>
 </kw>
-<status status="PASS" starttime="20230529 12:04:15.018" endtime="20230529 12:04:20.225"/>
+<status status="PASS" starttime="20230530 00:46:58.893" endtime="20230530 00:47:04.177"/>
 </kw>
 <kw name="E preencher o campo Mobile number" library="PaginaHomeItera">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoPhone}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230529 12:04:20.226" endtime="20230529 12:04:20.253"/>
+<status status="PASS" starttime="20230530 00:47:04.179" endtime="20230530 00:47:04.219"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoPhone}</arg>
 <arg>${dados_t1.NumeroTelefonico}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230529 12:04:20.255" level="INFO">Typing text '71978123536' into text field '//input[@id="phone"]'.</msg>
-<status status="PASS" starttime="20230529 12:04:20.253" endtime="20230529 12:04:20.370"/>
+<msg timestamp="20230530 00:47:04.221" level="INFO">Typing text '71978123536' into text field '//input[@id="phone"]'.</msg>
+<status status="PASS" starttime="20230530 00:47:04.219" endtime="20230530 00:47:04.511"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 12:04:25.371" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230529 12:04:20.370" endtime="20230529 12:04:25.371"/>
+<msg timestamp="20230530 00:47:09.512" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230530 00:47:04.512" endtime="20230530 00:47:09.512"/>
 </kw>
 <kw name="Textfield Should Contain" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoPhone}</arg>
 <arg>${dados_t1.NumeroTelefonico}</arg>
 <doc>Verifies text field ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230529 12:04:25.414" level="INFO">Text field '//input[@id="phone"]' contains text '71978123536'.</msg>
-<status status="PASS" starttime="20230529 12:04:25.371" endtime="20230529 12:04:25.414"/>
+<msg timestamp="20230530 00:47:09.547" level="INFO">Text field '//input[@id="phone"]' contains text '71978123536'.</msg>
+<status status="PASS" starttime="20230530 00:47:09.512" endtime="20230530 00:47:09.547"/>
 </kw>
-<status status="PASS" starttime="20230529 12:04:20.226" endtime="20230529 12:04:25.414"/>
+<status status="PASS" starttime="20230530 00:47:04.178" endtime="20230530 00:47:09.547"/>
 </kw>
 <kw name="E preencher o campo Password" library="PaginaHomeItera">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoSenha}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230529 12:04:25.415" endtime="20230529 12:04:25.443"/>
+<status status="PASS" starttime="20230530 00:47:09.548" endtime="20230530 00:47:09.571"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoSenha}</arg>
 <arg>${dados_t1.Senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230529 12:04:25.445" level="INFO">Typing text 'tarefa1' into text field '//input[@id="password"]'.</msg>
-<status status="PASS" starttime="20230529 12:04:25.443" endtime="20230529 12:04:25.563"/>
+<msg timestamp="20230530 00:47:09.572" level="INFO">Typing text 'tarefa1' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20230530 00:47:09.571" endtime="20230530 00:47:09.703"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 12:04:30.564" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230529 12:04:25.564" endtime="20230529 12:04:30.564"/>
+<msg timestamp="20230530 00:47:14.703" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230530 00:47:09.703" endtime="20230530 00:47:14.703"/>
 </kw>
 <kw name="Textfield Should Contain" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoSenha}</arg>
 <arg>${dados_t1.Senha}</arg>
 <doc>Verifies text field ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230529 12:04:30.601" level="INFO">Text field '//input[@id="password"]' contains text 'tarefa1'.</msg>
-<status status="PASS" starttime="20230529 12:04:30.564" endtime="20230529 12:04:30.601"/>
+<msg timestamp="20230530 00:47:14.740" level="INFO">Text field '//input[@id="password"]' contains text 'tarefa1'.</msg>
+<status status="PASS" starttime="20230530 00:47:14.703" endtime="20230530 00:47:14.740"/>
 </kw>
-<status status="PASS" starttime="20230529 12:04:25.415" endtime="20230529 12:04:30.601"/>
+<status status="PASS" starttime="20230530 00:47:09.548" endtime="20230530 00:47:14.740"/>
 </kw>
 <kw name="E preencher o campo Adress" library="PaginaHomeItera">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoAdress}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230529 12:04:30.602" endtime="20230529 12:04:30.627"/>
+<status status="PASS" starttime="20230530 00:47:14.741" endtime="20230530 00:47:14.763"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoAdress}</arg>
 <arg>${dados_t1.Adress}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230529 12:04:30.628" level="INFO">Typing text '"My address is 123 Main Street.' into text field '//textarea[@id="address"]'.</msg>
-<status status="PASS" starttime="20230529 12:04:30.627" endtime="20230529 12:04:30.753"/>
+<msg timestamp="20230530 00:47:14.764" level="INFO">Typing text '"My address is 123 Main Street.' into text field '//textarea[@id="address"]'.</msg>
+<status status="PASS" starttime="20230530 00:47:14.763" endtime="20230530 00:47:15.000"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 12:04:35.753" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230529 12:04:30.753" endtime="20230529 12:04:35.753"/>
+<msg timestamp="20230530 00:47:20.001" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230530 00:47:15.001" endtime="20230530 00:47:20.001"/>
 </kw>
 <kw name="Textarea Should Contain" library="SeleniumLibrary">
 <arg>${tarefa_um.CampoAdress}</arg>
 <arg>${dados_t1.Adress}</arg>
 <doc>Verifies text area ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230529 12:04:35.783" level="INFO">Text area '//textarea[@id="address"]' contains text '"My address is 123 Main Street.'.</msg>
-<status status="PASS" starttime="20230529 12:04:35.753" endtime="20230529 12:04:35.793"/>
+<msg timestamp="20230530 00:47:20.027" level="INFO">Text area '//textarea[@id="address"]' contains text '"My address is 123 Main Street.'.</msg>
+<status status="PASS" starttime="20230530 00:47:20.001" endtime="20230530 00:47:20.027"/>
 </kw>
-<status status="PASS" starttime="20230529 12:04:30.602" endtime="20230529 12:04:35.793"/>
+<status status="PASS" starttime="20230530 00:47:14.740" endtime="20230530 00:47:20.027"/>
 </kw>
-<status status="PASS" starttime="20230529 12:04:06.903" endtime="20230529 12:04:35.794"/>
+<kw name="E clicar no botao submit" library="PaginaHomeItera">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${tarefa_um.BtnSubimit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230530 00:47:20.028" endtime="20230530 00:47:20.052"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${tarefa_um.BtnSubimit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230530 00:47:20.053" level="INFO">Clicking button '//button[@name="submit"]'.</msg>
+<status status="PASS" starttime="20230530 00:47:20.052" endtime="20230530 00:47:20.122"/>
+</kw>
+<status status="PASS" starttime="20230530 00:47:20.028" endtime="20230530 00:47:20.122"/>
+</kw>
+<kw name="Então ele finalizará a tarefa" library="PaginaHomeItera">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230530 00:47:20.123" endtime="20230530 00:47:22.310"/>
+</kw>
+<status status="PASS" starttime="20230530 00:47:20.123" endtime="20230530 00:47:22.310"/>
+</kw>
+<status status="PASS" starttime="20230530 00:46:50.859" endtime="20230530 00:47:22.311"/>
 </test>
-<status status="PASS" starttime="20230529 12:04:06.047" endtime="20230529 12:04:35.795"/>
+<status status="PASS" starttime="20230530 00:46:50.200" endtime="20230530 00:47:22.312"/>
 </suite>
 <statistics>
 <total>
@@ -154,7 +175,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Resolucao1">Resolucao1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="ResolucaoT1">ResolucaoT1</stat>
 </suite>
 </statistics>
 <errors>
